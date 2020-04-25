@@ -37,7 +37,6 @@ public abstract class Numero {
 		return new NumeroComplejo(numeroClone.getValor(), numeroClone.getImaginario());
 	}
 	
-
 	public BigDecimal getValor() {
 		return valor;
 	}
