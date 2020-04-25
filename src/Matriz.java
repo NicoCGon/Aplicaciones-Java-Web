@@ -34,10 +34,10 @@ public class Matriz {
 	}
 	
 	public Matriz clone() {
-		Numero[][] tempMatriz = new NumeroComplejo[this.cantidadFilas][this.cantidadColumnas];
+		Numero[][] tempMatriz = new Numero[this.cantidadFilas][this.cantidadColumnas];
 		for (int i = 0; i < this.cantidadFilas; i++) {
 			for (int j = 0; j < this.cantidadColumnas; j++) {
-				tempMatriz[i][j] = new NumeroComplejo(matriz[i][j].getValor());
+				tempMatriz[i][j] = matriz[i][j].clone();
 			}
 		}
 		return new Matriz(tempMatriz);

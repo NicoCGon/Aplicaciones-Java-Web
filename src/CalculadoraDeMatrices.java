@@ -22,7 +22,7 @@ public class CalculadoraDeMatrices {
 	}
 	
 	public static void traza(Matriz matriz) {
-		Numero traza = new NumeroComplejo(BigDecimal.ZERO);
+		Numero traza = new NumeroComplejo(BigDecimal.ZERO, BigDecimal.ZERO);
 		for (int i = 0; i < matriz.getCantidadFilas(); i++) {
 			for (int j = 0; j < matriz.getCantidadColumnas(); j++) {
 				if(i == j) {
@@ -36,7 +36,7 @@ public class CalculadoraDeMatrices {
 	public static void determinante(Matriz matriz) {
 		//MATRIZ 2X2
 		if(matriz.getCantidadFilas() == 2) {
-			Numero diagonali = new NumeroComplejo(BigDecimal.ONE), mdiagonali = new NumeroComplejo(BigDecimal.ONE);
+			Numero diagonali = new NumeroComplejo(BigDecimal.ONE,BigDecimal.ONE), mdiagonali = new NumeroComplejo(BigDecimal.ONE,BigDecimal.ONE);
 			for (int i = 0; i < matriz.getCantidadFilas(); i++) {
 				for (int j = 0; j < matriz.getCantidadColumnas(); j++) {
 					if(i == j) {
@@ -72,7 +72,7 @@ public class CalculadoraDeMatrices {
 	//Recorre desde la posicion hasta devuelta llegar al mismo (ej: Para J posicion = 1 => [1][0],[2][1],[0][2])
 	private static Numero recorrerCicloMatriz(int posicionInicial, Matriz matriz) {
 		int posicionInicio = 0, posicion = 0;
-		Numero diagonal = new NumeroComplejo(BigDecimal.ONE);
+		Numero diagonal = new NumeroComplejo(BigDecimal.ONE,BigDecimal.ONE);
 		for (int i = posicionInicial; i < matriz.getCantidadFilas(); i++) {
 			diagonal.multiplicarPor(matriz.getMatriz()[i][posicion]);
 			posicion++;
@@ -88,7 +88,7 @@ public class CalculadoraDeMatrices {
 	
 	//Recorre desde la posicion hasta devuelta llegar al mismo invertido
 	private static Numero recorrerCicloMatrizInvertido(int posicion, Matriz matriz) {
-		Numero diagonal = new NumeroComplejo(BigDecimal.ONE);
+		Numero diagonal = new NumeroComplejo(BigDecimal.ONE,BigDecimal.ONE);
 		for (int i = 0; i < matriz.getCantidadFilas(); i++) {
 			posicion = posicion < 0 ? matriz.getCantidadFilas() -1 : posicion;
 			diagonal.multiplicarPor(matriz.getMatriz()[i][posicion]);
