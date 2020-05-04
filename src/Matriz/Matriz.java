@@ -1,4 +1,4 @@
-package Practica1;
+package Matriz;
 public class Matriz {
 	private int cantidadFilas;
 	private int cantidadColumnas;

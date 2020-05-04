@@ -1,4 +1,4 @@
-package Practica1;
+package Matriz;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.sql.SQLException;
@@ -26,7 +26,6 @@ public class Init {
 		CalculadoraDeMatrices.traza(matriz1);
 		CalculadoraDeMatrices.determinante(matriz1);
 		CalculadoraDeMatrices.determinante(matrizdeterminante);
-		throw new SQLException("Error al consultar la matriz");
 	}
 
 }

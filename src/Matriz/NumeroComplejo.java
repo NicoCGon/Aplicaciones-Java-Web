@@ -1,4 +1,4 @@
-package Practica1;
+package Matriz;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 

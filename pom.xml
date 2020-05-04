@@ -3,6 +3,13 @@
   <groupId>Matriz</groupId>
   <artifactId>Matriz</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  <dependencies>
+	<dependency>
+		<groupId>xom</groupId>
+		<artifactId>xom</artifactId>
+		<version>1.3.5</version>
+	</dependency>
+  </dependencies>
   <build>
     <sourceDirectory>src</sourceDirectory>
     <plugins>
